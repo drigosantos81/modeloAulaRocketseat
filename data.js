@@ -4,6 +4,7 @@ module.exports = [
         title: "Behind the Code # 01 | Autenticação do Adonis",
         duration: "1:06:26 min",
         price: "Grátis",
+        featured: true
     },
     {
         id: "R7WTFLM1lto",
@@ -22,6 +23,7 @@ module.exports = [
         title: "Behind the Code # 04 | Crud de workshops",
         duration: "2:44:22 min",
         price: "Grátis",
+        featured: true
     },
     {
         id: "whDe_W-CtiU",
@@ -34,5 +36,6 @@ module.exports = [
         title: "Behind the Code # 06 | Feature de transição",
         duration: "1:05:49 min",
         price: "Grátis",
+        featured: true
     }
 ]

@@ -1,6 +1,6 @@
 module.exports = [
     {
-        id: "8tTWt-JY",
+        id: "3t78tTWt-JY",
         title: "Behind the Code # 01 | Autenticação do Adonis",
         duration: "1:06:26 min",
         price: "Grátis",

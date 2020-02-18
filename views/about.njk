@@ -1,8 +1,8 @@
-{% extends "layout.html" %}
+{% extends "layout.njk" %}
 
 {% block head %}
 
-<title>Sobre | Rodrigo Emanuel</title>
+<title>Sobre | {{ data.name }}</title>
 
 {% endblock %}
 
@@ -10,15 +10,15 @@
 {% block content %}
 
 <div id="wrapper">
-    <img src="https://avatars3.githubusercontent.com/u/52610125?s=460&v=4" alt="Rodrigo Emanuel">
-    <h1>Rodrigo Emanuel</h1>
-    <h2>Estudante - Rocketseat</h2>
-    <p>Estudante nível Noob... na <a href="https://rocketseat.com.br" target="_blank">Rocketseat</a> tentando forçar a natureza para aprender programação Web!</p>
+    <img src="{{ data.avatar_url }}" alt="Imagem de {{ data.name }}">
+    <h1>{{ data.name }}</h1>
+    <h2>{{ data.role }}</h2>
+    <p>{{ data.description }}</p>
 </div>        
 <div id="links-footer" class="links">
-    <a href="https://github.com/drigosantos81" target="_blank">Github</a>
-    <a href="https://twitter.com/drigosantos" target="_blank">Twitter</a>
-    <a href="https://www.linkedin.com/in/rodrigo-emanuel-8505b420/" target="_blank">Linkedin</a>
+    {% for link in data.links %}
+        <a href="{{ link.url }}" target="_blank">{{ link.name }}</a>
+        {% endfor %}
 </div>
 
 {% endblock %}

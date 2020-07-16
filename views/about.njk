@@ -14,7 +14,24 @@
     <h1>{{ data.name }}</h1>
     <h2>{{ data.role }}</h2>
     <p>{{ data.description }}</p>
-</div>        
+</div>
+
+<div class="contato">
+    <div class="input">
+        <p>Solicite um orçamento</p>
+        <p>Dados</p>
+        <p>CPF: </p>
+        <input mame="cpf" type="text">
+        <p>Valor do Orçamento: </p>
+        <div class="calculo">
+            <input name="valor" type="number" onkeydown="format()">
+            <p id="resposta">Valor: </p>
+        </div>
+        <p>E-mail: </p>
+        <input name="email" type="email">
+    </div>
+</div>
+
 <div id="links-footer" class="links">
     {% for link in data.links %}
         <a href="{{ link.url }}" target="_blank">{{ link.name }}</a>

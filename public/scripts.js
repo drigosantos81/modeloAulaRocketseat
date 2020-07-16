@@ -8,3 +8,28 @@ for (let card of cards) {
         window.location.href = `/video?id=${videoId}`;
     })
 }
+
+const input = document.querySelector('input[name="valor"]');
+input.addEventListener("keydown", function(e) {
+    setTimeout(function() {
+        let { value } = e.target;
+        value = value.replace(/\D/g,"") * 2;
+        
+        console.log(value);
+        document.querySelector('#resposta').innerHTML = `Valor: R$ ${value}`;
+    }, 100);
+});
+
+// function format() {
+//     const input = document.querySelector('input[name="valor"]');
+//     input.addEventListener("keydown", function(e) {
+//         setTimeout(function() {
+//             let { value } = e.target;
+//             value = value.replace(/\D/g,"") * 2;
+            
+//             console.log(value);
+//             document.querySelector('#resposta').innerHTML = `Valor: R$ ${value}`;
+//         }, 100);
+//     });
+// }
+
